@@ -1,0 +1,33 @@
+#include <iostream>
+#include <math.h>
+#include <string>
+#include <random>
+
+using namespace std;
+
+
+int d4 = rand() % 6+1;
+int d6 = rand() % 8+1;
+int d8 = rand() % 8+1;
+int d10 = rand() % 10+1;
+int d12 = rand() % 12+1;
+int d20 = rand() % 20+1;
+int d100 = rand() % 100+1;
+string dicepick = NULL;
+
+int main()
+{
+  cout << "Select Dice : ";
+  cin >> dicepick;
+  cout << "Your selection was : " << dicepick << endl;
+  
+  /*while (end != true)
+  {
+   
+  
+  } */
+
+
+
+ return 0;
+}
