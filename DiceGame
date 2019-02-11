@@ -21,13 +21,25 @@ int main()
   cin >> dicepick;
   cout << "Your selection was : " << dicepick << endl;
   
-  /*while (end != true)
+  switch(dicepick)
   {
-   
+   case "d4" : cout << d4;
+   break;
+   case "d6" : cout << d6;
+   break;
+   case "d8" : cout << d8;
+   break;
+   case "d10" : cout << d10;
+   break;
+   case "d12" : cout << d12;
+   break;
+   case "d20" : cout << d20;
+   break;
+   case "d100" : cout << d100;
+   break;
+   default : cout << "Selected _____";
+   break;
+  }
   
-  } */
-
-
-
  return 0;
 }
