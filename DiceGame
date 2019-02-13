@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdiolib.h>
 #include <math.h>
 #include <string>
 #include <random>
@@ -13,16 +14,31 @@ int d10 = rand() % 10+1;
 int d12 = rand() % 12+1;
 int d20 = rand() % 20+1;
 int d100 = rand() % 100+1;
-string dicepick = NULL;
+string dicePick;
+string gameSelect;
+
+cout "Select a Game : " << endl;
+cout << "> HighLow" << endl;
+cout << "> Juncinra" << endl;
+cout << "> ECard" << endl << endl;
+cout << "> Your choice is ... : ";
+cin  >>  gameSelect;
+
+//Declare method headers to connect functions to user's choice.
+void highLow(int);
+void juncinra(int);
+void ECard(string);
 
 int main()
 {
-  cout << "Select Dice : ";
-  cin >> dicepick;
-  cout << "Your selection was : " << dicepick << endl;
   
-  switch(dicepick)
+  
+  switch (dicePick)
   {
+    cout << "Select Dice : ";
+    cin >> dicepick;
+    cout << "Your selection was : " << dicepick << endl;
+   
    case "d4" : cout << d4;
    break;
    case "d6" : cout << d6;
@@ -41,5 +57,200 @@ int main()
    break;
   }
   
+ return 0;
+}
+
+void highLow(int numberGuess)
+{
+ int numberGuess;
+ string difficultySelect << "";
+ int correctNumberEasy = rand() % 10+1;
+ int correctNumberMedium = rand() % 30+1;
+ int correctNumberHard = rand() % 50+1;
+ int correctNumberExpert = rand() % 100+1;
+
+ cout << "Select a difficulty : "
+ cout << ">..Easy" <<endl;
+ cout << ">..Medium" << endl;
+ cout << ">..Hard" << endl;
+ cout << ">..Expert" << endl;
+ cout << ">..";
+ cin >> difficultySelect;
+ cout << endl;
+ 
+ 
+ if (difficultyChoice =="Easy" || difficultyChoice == "easy")
+ {
+   cout << "Please input a number 1-10 : ";
+   cin numberGuess;
+   if (numberGuess == correctNumberEasy)
+   { 
+     cout << "We have a winner !!!" << endl << "Congratulations !" << endl; 
+   }
+      
+   else 
+   { 
+     cout << "Oh too bad..." << endl << "The correct number was : " << correctNumberEasy << "and Yours was : " << numberGuess << endl; 
+   }
+     
+ } // end of EasyMode
+
+ if (difficultyChoice =="Medium" || difficultyChoice == "medium")
+ {
+   cout << "Please input a number 1-30 : ";
+   cin >> numberGuess;
+   if (numberGuess == correctNumberMedium)
+   { 
+     cout << "We have a winner !!!" << endl << "Congratulations !" << endl; 
+   }
+      
+   else 
+   { 
+     cout << "Oh too bad..." << endl << "The correct number was : " << correctNumberMedium << "and Yours was : " << numberGuess << endl; 
+   }
+     
+ } // end of MediuimMode
+ 
+ 
+ if (difficultyChoice =="Hard" || difficultyChoice == "Hard")
+ {
+   cout << "Please input a number 1-50 : ";
+   cin >> numberGuess;
+   if (numberGuess == correctNumberHard)
+   { 
+     cout << "We have a winner !!!" << endl << "Congratulations !" << endl; 
+   }
+      
+   else 
+   { 
+     cout << "Oh too bad..." << endl << "The correct number was : " << correctNumberHard << "and Yours was : " << numberGuess << endl; 
+   }
+     
+ } // end of HardMode
+
+
+ if (difficultyChoice =="Expert" || difficultyChoice == "Expert")
+ {
+   cout << "Please input a number 1-100 : ";
+   cin >> numberGuess;
+   if (numberGuess == correctNumberExpert)
+   { 
+     cout << "We have a winner !!!" << endl << "Congratulations !" << endl; 
+   }
+      
+   else 
+   { 
+     cout << "Oh too bad..." << endl << "The correct number was : " << correctNumberExpert << "and Yours was : " << numberGuess << endl; 
+   }
+     
+ } // end of ExpertMode
+
+
+}//end of HIGHLOW
+
+
+void juncinra (int Selection)
+{
+
+string playChoice == "Yes";
+
+
+ cout << "-----------------------=}JUNCINRA : THE DELICATE BALANCE {=------------------------" << endl;
+ 
+ 
+ cout << "Welcome to Juncinra. The rules are simple." << endl;
+ cout << ">.. Royal beats Swordsman" << endl;
+ cout << ">.. Swordsman beats Mage" << endl;
+ cout << ">.. Mage beats Noble" << endl << "--------------------" << endl;
+ 
+ cout << "This trio is numbered 1-3." << endl;
+ cout << "1 is Royal" << endl << "2 is Swordsman" << endl << "3 is Mage" << endl;
+ cout << "Please input a number 1-3 and press {ENTER} : ";
+ cin >> Selection;
+ 
+ 
+ 
+ while (playChoice == "Yes" || playChoice == "yes" || playChoice == "Y" || playChoice == "y")
+ {
+ 
+ 
+ if (Selection == 1 && CPU == 2)
+ {
+  cout << ">P1 sent forth Royal !" << endl  << "The enemy unit sent forth Swordsman !" << endl;
+  cout << ">Royal beats Swordsman through use of their authority and status !" << endl;
+  cout << ">So P1 was Successful !!" << endl;
+ }
+ else if (Selection == 2 && CPU == 1)
+ {
+  cout << ">P1 sent forth Swordsman !" << endl  << "The enemy unit sent forth Royal !" << endl;
+  cout << ">Royal beats Swordsman through use of their authority and status !" << endl;
+  cout << ">So P1 is sent back to their kingdom in the shambles of defeat !!" << endl;
+ }
+ 
+
+
+
+ if (Selection == 2 && CPU == 3)
+ {
+     cout << ">P1 sent forth Swordsman !" << endl << ">The enemy unit sent forth Mage !" << endl;
+     cout << ">Swordsman beats Mage through a frontal attack !" << endl; 
+     cout << ">So P1 was Successful !!" << endl;
+ }
+ else if (Selection == 3 && CPU == 2)
+ {
+     cout << ">P1 sent forth Mage !" << endl << ">The enemy unit sent forth Swordsman !" << endl;
+     cout << ">Swordsman beats Mage through a frontal attack !" << endl; 
+     cout << ">So P1 is sent back to their kingdom in the shambles of defeat !!" << endl;
+ }
+  
+ 
+ if (Selection == 3 && CPU == 1)
+ {
+   cout << ">P1 sent forth Mage !" << endl << ">The enemy unit sent forth Noble !" << endl;
+   cout << "Mage beats Noble through their extensive magical and intellectual prowess !" << endl;
+   cout << ">So P1 was Successful !!" << endl;
+ }
+ else if (Selection == 1 && CPU == 3)
+ {
+   cout << ">P1 sent forth Royal !" << endl << ">The enemy unit sent forth Royal !" << endl;
+   cout << "Mage beats Royal through their extensive magical and intellectual prowess !" << endl;
+   cout << ">So P1 is sent back to their kingdom in the shambles of defeat !!" << endl;
+ }
+
+
+//In the case of a tie
+  if (Selection == 1 && CPU == 1)
+  {
+    cout << ">P1 sent forth Royal !" << endl << ">The enemy unit also sent forth Royal !" << endl;
+    cout << ">The clash is legendary, both sides pulling out all stops to attain victory... !!" << endl;
+    cout << ">Pooling all their strength the two end in a standstill, making this bout a Tie. << endl;
+  }
+  
+  if (Selection == 2 && CPU == 2)
+  {
+    cout << ">P1 sent forth Swordsman !" << endl << ">The enemy unit also sent forth Swordsman !" << endl;
+    cout << ">The clash is legendary, both sides pulling out all stops to attain victory... !!" << endl;
+    cout << ">Pooling all their strength the two end in a standstill, making this bout a Tie. << endl;
+  }
+  
+  if (Selection == 3 && CPU == 3)
+  {
+    cout << ">P1 sent forth Mage !" << endl << ">The enemy unit also sent forth Mage !" << endl;
+    cout << ">The clash is legendary, both sides pulling out all stops to attain victory... !!" << endl;
+    cout << ">Pooling all their strength the two end in a standstill, making this bout a Tie. << endl;
+  }
+  
+ cout << ">Play again (Y/N) : ";
+ cin >> playChoice;
+ }
+ 
+ 
+} //end of JUNCINRA
+
+
+
+void ECard (string)
+{ 
+
  return 0;
 }
