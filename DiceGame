@@ -1,3 +1,11 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <iostream>
 #include <math.h>
 #include <string>
@@ -13,57 +21,48 @@ int d10 = rand() % 10+1;
 int d12 = rand() % 12+1;
 int d20 = rand() % 20+1;
 int d100 = rand() % 100+1;
-string dicePick;
 string gameSelect;
 
+//Declare method headers to connect functions to user's choice.
+void highLow();
+void juncinra();
+void diceRoller();
 
 int main()
 {
     
     cout << "Select a Game : " << endl;
+    cout << ">DiceRoller : " << endl;
     cout << "> HighLow" << endl;
     cout << "> Juncinra" << endl;
     cout << "> ECard" << endl << endl;
     cout << "> Your choice is ... : ";
     cin  >>  gameSelect;
 
-//Declare method headers to connect functions to user's choice.
-void highLow(int);
-void juncinra(int);
+
+if (gameSelect == "HighLow")
+{
+    highLow();
+}
+
+if (gameSelect == "Juncinra")
+{
+    juncinra();
+}
+
+if (gameSelect == "DiceRoller")
+{
+    diceRoller();
+}
 //void ECard(string);
-    
-  
-  /*
-  switch (dicePick)
-  {
-    cout << "Select Dice : ";
-    cin >> dicepick;
-    cout << "Your selection was : " << dicepick << endl;
-   
-   case "d4" : cout << d4;
-   break;
-   case "d6" : cout << d6;
-   break;
-   case "d8" : cout << d8;
-   break;
-   case "d10" : cout << d10;
-   break;
-   case "d12" : cout << d12;
-   break;
-   case "d20" : cout << d20;
-   break;
-   case "d100" : cout << d100;
-   break;
-   default : cout << "Selected _____";
-   break;
-  }
-  */
+
  //return 0;
 }
 
-void highLow(int numberGuess)
+void highLow()
 {
  
+ int numberGuess;
  string difficultyChoice;
  int correctNumberEasy = rand() % 10+1;
  int correctNumberMedium = rand() % 30+1;
@@ -91,7 +90,7 @@ void highLow(int numberGuess)
       
    else 
    { 
-     cout << "Oh too bad..." << endl << "The correct number was : " << correctNumberEasy << "and Yours was : " << numberGuess << endl; 
+     cout << "Oh too bad..." << endl << "The correct number was : " << correctNumberEasy << endl << "Yours was : " << numberGuess << endl; 
    }
      
  } // end of EasyMode
@@ -107,7 +106,7 @@ void highLow(int numberGuess)
       
    else 
    { 
-     cout << "Oh too bad..." << endl << "The correct number was : " << correctNumberMedium << "and Yours was : " << numberGuess << endl; 
+     cout << "Oh too bad..." << endl << "The correct number was : " << correctNumberMedium << endl << "Yours was : " << numberGuess << endl; 
    }
      
  } // end of MediuimMode
@@ -124,7 +123,7 @@ void highLow(int numberGuess)
       
    else 
    { 
-     cout << "Oh too bad..." << endl << "The correct number was : " << correctNumberHard << "and Yours was : " << numberGuess << endl; 
+     cout << "Oh too bad..." << endl << "The correct number was : " << correctNumberHard << endl<< "Yours was : " << numberGuess << endl; 
    }
      
  } // end of HardMode
@@ -141,22 +140,23 @@ void highLow(int numberGuess)
       
    else 
    { 
-     cout << "Oh too bad..." << endl << "The correct number was : " << correctNumberExpert << "and Yours was : " << numberGuess << endl; 
+     cout << "Oh too bad..." << endl << "The correct number was : " << correctNumberExpert<< endl << "Yours was : " << numberGuess << endl; 
    }
      
  } // end of ExpertMode
 
+return;
 
 }//end of HIGHLOW
 
 
-void juncinra (int Selection)
+void juncinra ()
 {
 
 
 int CPU = rand() % 3+1;
 string playChoice = "Yes";
-
+int Selection;
 
  cout << "-----------------------=}JUNCINRA : THE DELICATE BALANCE {=------------------------" << endl;
  
@@ -248,7 +248,40 @@ string playChoice = "Yes";
  cout << ">Play again (Y/N) : ";
  cin >> playChoice;
  
+ return;
 } //end of JUNCINRA
+
+void diceRoller()
+{
+    int dicePick;        
+    cout << "Select Dice : ";
+    cin >> dicePick;
+  
+  switch (dicePick)
+  {
+ 
+    cout << "Your selection was : " << dicePick << endl;
+   
+   case 4 : cout << "Your roll : " << d4;
+   break;
+   case 6 : cout << "Your roll : " << d6;
+   break;
+   case 8 : cout << "Your roll : " << d8;
+   break;
+   case 10 : cout << "Your roll : " << d10;
+   break;
+   case 12 : cout << "Your roll : " << d12;
+   break;
+   case 20 : cout << "Your roll : " << d20;
+   break;
+   case 100 : cout << "Your roll : " << d100;
+   break;
+   default : cout << "Selected _____";
+   break;
+  }
+
+    
+}
 
 
 /*
@@ -258,3 +291,4 @@ void ECard (string)
  return 0;
 }
 */
+
