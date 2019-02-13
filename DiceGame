@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stdiolib.h>
 #include <math.h>
 #include <string>
 #include <random>
@@ -17,22 +16,24 @@ int d100 = rand() % 100+1;
 string dicePick;
 string gameSelect;
 
-cout "Select a Game : " << endl;
-cout << "> HighLow" << endl;
-cout << "> Juncinra" << endl;
-cout << "> ECard" << endl << endl;
-cout << "> Your choice is ... : ";
-cin  >>  gameSelect;
+
+int main()
+{
+    
+    cout << "Select a Game : " << endl;
+    cout << "> HighLow" << endl;
+    cout << "> Juncinra" << endl;
+    cout << "> ECard" << endl << endl;
+    cout << "> Your choice is ... : ";
+    cin  >>  gameSelect;
 
 //Declare method headers to connect functions to user's choice.
 void highLow(int);
 void juncinra(int);
 //void ECard(string);
-
-int main()
-{
+    
   
-  
+  /*
   switch (dicePick)
   {
     cout << "Select Dice : ";
@@ -56,33 +57,33 @@ int main()
    default : cout << "Selected _____";
    break;
   }
-  
- return 0;
+  */
+ //return 0;
 }
 
 void highLow(int numberGuess)
 {
- int numberGuess;
- string difficultySelect << "";
+ 
+ string difficultyChoice;
  int correctNumberEasy = rand() % 10+1;
  int correctNumberMedium = rand() % 30+1;
  int correctNumberHard = rand() % 50+1;
  int correctNumberExpert = rand() % 100+1;
 
- cout << "Select a difficulty : "
+ cout << "Select a difficulty : " << endl;
  cout << ">..Easy" <<endl;
  cout << ">..Medium" << endl;
  cout << ">..Hard" << endl;
  cout << ">..Expert" << endl;
  cout << ">..";
- cin >> difficultySelect;
+ cin >> difficultyChoice;
  cout << endl;
  
  
  if (difficultyChoice =="Easy" || difficultyChoice == "easy")
  {
    cout << "Please input a number 1-10 : ";
-   cin numberGuess;
+   cin >> numberGuess;
    if (numberGuess == correctNumberEasy)
    { 
      cout << "We have a winner !!!" << endl << "Congratulations !" << endl; 
@@ -154,7 +155,7 @@ void juncinra (int Selection)
 
 
 int CPU = rand() % 3+1;
-string playChoice == "Yes";
+string playChoice = "Yes";
 
 
  cout << "-----------------------=}JUNCINRA : THE DELICATE BALANCE {=------------------------" << endl;
@@ -250,9 +251,10 @@ string playChoice == "Yes";
 } //end of JUNCINRA
 
 
-
+/*
 void ECard (string)
 { 
 
  return 0;
 }
+*/
