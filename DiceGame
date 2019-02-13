@@ -152,6 +152,8 @@ void highLow(int numberGuess)
 void juncinra (int Selection)
 {
 
+
+int CPU = rand() % 3+1;
 string playChoice == "Yes";
 
 
@@ -170,7 +172,7 @@ string playChoice == "Yes";
  
  
  
- while (playChoice == "Yes" || playChoice == "yes" || playChoice == "Y" || playChoice == "y")
+ if (playChoice == "Yes" || playChoice == "yes" || playChoice == "Y" || playChoice == "y")
  {
  
  
@@ -223,27 +225,27 @@ string playChoice == "Yes";
   {
     cout << ">P1 sent forth Royal !" << endl << ">The enemy unit also sent forth Royal !" << endl;
     cout << ">The clash is legendary, both sides pulling out all stops to attain victory... !!" << endl;
-    cout << ">Pooling all their strength the two end in a standstill, making this bout a Tie. << endl;
+    cout << ">Pooling all their strength the two end in a standstill, making this bout a Tie." << endl;
   }
   
   if (Selection == 2 && CPU == 2)
   {
     cout << ">P1 sent forth Swordsman !" << endl << ">The enemy unit also sent forth Swordsman !" << endl;
     cout << ">The clash is legendary, both sides pulling out all stops to attain victory... !!" << endl;
-    cout << ">Pooling all their strength the two end in a standstill, making this bout a Tie. << endl;
+    cout << ">Pooling all their strength the two end in a standstill, making this bout a Tie." << endl;
   }
   
   if (Selection == 3 && CPU == 3)
   {
     cout << ">P1 sent forth Mage !" << endl << ">The enemy unit also sent forth Mage !" << endl;
     cout << ">The clash is legendary, both sides pulling out all stops to attain victory... !!" << endl;
-    cout << ">Pooling all their strength the two end in a standstill, making this bout a Tie. << endl;
+    cout << ">Pooling all their strength the two end in a standstill, making this bout a Tie." << endl;
   }
   
+ 
+ }
  cout << ">Play again (Y/N) : ";
  cin >> playChoice;
- }
- 
  
 } //end of JUNCINRA
 
