@@ -27,7 +27,7 @@ cin  >>  gameSelect;
 //Declare method headers to connect functions to user's choice.
 void highLow(int);
 void juncinra(int);
-void ECard(string);
+//void ECard(string);
 
 int main()
 {
