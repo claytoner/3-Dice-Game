@@ -35,7 +35,7 @@ int main()
     cout << ">DiceRoller : " << endl;
     cout << "> HighLow" << endl;
     cout << "> Juncinra" << endl;
-    cout << "> ECard" << endl << endl;
+    cout << "> Ceelo" << endl << endl;
     cout << "> Your choice is ... : ";
     cin  >>  gameSelect;
 
@@ -54,8 +54,11 @@ if (gameSelect == "DiceRoller")
 {
     diceRoller();
 }
-//void ECard(string);
-
+if (gameSelect == "CeeLow")
+{
+  void ceeLow();
+}
+ 
  //return 0;
 }
 
@@ -284,11 +287,24 @@ void diceRoller()
 }
 
 
-/*
-void ECard (string)
-{ 
+
+void ceeLow()
+{
+ int dice1;
+ int dice2;
+ int dice3;
+ 
+ cout << "$$$$$$$$$$Welcome to CeeLo$$$$$$$$$$" << endl;
+ cout << "The rules of this game are as follows : " << endl;
+ cout << "Players take turns rolling 3 Dice into a bowl." << endl;
+ cout << "A pair of 2 matching and one other is called a Point." << endl;
+ cout << "A 1-2-3 is the worst roll, paying out double." << endl;
+ cout << "A 4-5-6 is the best roll" << endl;
+ cout << "Three of a kind will pay out double" << endl << endl;
+ cout << "Any dice that fall out of the bowl void the entire roll" << endl;
+
 
  return 0;
 }
-*/
+
 
